@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Quotes | Local MongoDB";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Total Records loaded: 46</p>
+
+
+
+<table>
+    <tr>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Popularity</th>
+        <th>Quote</th>
+    </tr>
+
+    @foreach (Assignment2.Models.QuoteModel q in Model)
+    {
+        <tr>
+            <td>@q.Author</td>
+            <td>@q.Category</td>
+            <td>@q.Popularity</td>
+            <td>@q.Quote</td>
+        </tr>
+    }
+</table>
